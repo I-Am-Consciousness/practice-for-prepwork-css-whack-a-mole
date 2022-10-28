@@ -1,6 +1,6 @@
 let score = 0;
-let molesLeft = 30;
-let popupLength = 3000;
+let molesLeft = 50;
+let popupLength = 2000;
 let hideTimeout;
 let clickable = false;
 
@@ -30,7 +30,7 @@ function hideMole(mole) {
   clickable = false;
   mole.classList.add('wgs__mole-head--hidden');
 
-  setTimeout(popUpRandomMole, 500);
+  setTimeout(popUpRandomMole, 1000);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -49,10 +49,10 @@ window.addEventListener('DOMContentLoaded', () => {
       hideMole(event.target);
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-      // event.target.classList.add('wgs__mole-head--hidden');
+      event.target.classList.add('wgs__mole-head--hidden');
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
-      // event.target.classList.add('wgs__mole-head--whacked');
+      event.target.classList.add('wgs__mole-head--whacked');
     });
   }
 });
